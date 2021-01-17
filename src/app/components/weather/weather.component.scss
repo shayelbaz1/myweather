@@ -1,0 +1,31 @@
+.weather-view {
+  padding-bottom: 20px;
+  .weather-description {
+    text-align: center;
+    margin: 40px;
+    .weather-text {
+      align-self: center;
+    }
+  }
+  .weather-details-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    @media only screen and (max-width: 650px) {
+      grid-template-columns: unset;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  img.weather-img {
+    height: 100px;
+    margin-right: 40px;
+    flex: 0 0 175px;
+  }
+  span.fav-section {
+    margin-left: 40px;
+  }
+  .city-name {
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../sass/setup/functions";
+@import "../../../sass/setup/vars";
+
+.main-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(60);
+  background-color: $background-header;
+  z-index: 1;
+  a {
+    font-size: 1.1rem;
+    color: $color-link;
+    text-decoration: auto;
+    font-family: -webkit-pictograph;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 0.8rem;
+    }
+    &:active {
+      @extend .active;
+    }
+  }
+}
+
+.active {
+  background-color: transparent;
+  color: #a1e4fc !important;
+}
+
+img {
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,2 @@
+<app-search (setFeaturedCity)="setFeaturedCity($event)"></app-search>
+<app-weather [featuredCity]="featuredCity$ | async" [weekWeather]="weekWeather$ | async"></app-weather>

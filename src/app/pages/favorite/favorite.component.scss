@@ -1,0 +1,26 @@
+.favorites-container {
+  gap: 15px;
+  padding-bottom: 20px;
+  .remove-btn {
+    z-index: 5;
+    top: 0;
+    position: absolute;
+    right: 0;
+    background: none;
+    color: #d7d7d7;
+    font-weight: bold;
+    font-size: 1.1rem;
+    &:hover {
+      color: #525252;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .mat-card-title {
+      font-size: 16px;
+    }
+    .item {
+      width: 25%;
+      text-align: center;
+    }
+  }
+}

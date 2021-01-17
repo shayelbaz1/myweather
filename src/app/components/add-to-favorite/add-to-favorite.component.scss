@@ -1,0 +1,8 @@
+
+.heart-icon::before {
+    content: '\2665';
+    color: red;
+    font-size: 3em;
+    position: relative;
+    top: -10px;
+}

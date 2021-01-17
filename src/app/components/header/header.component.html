@@ -1,0 +1,23 @@
+<mat-toolbar class="main-topbar flex space-between align-center wrap" *ngIf="isLoggedIn$ | async">
+  <div class="logo-container flex align-center">
+    <img src="../../../assets/logo/logo.png" alt="weather" width="64px" routerLink="/">
+  </div>
+  <nav class="nav main-nav">
+    <a class="home-btn router-link column-layout" routerLink="/" [ngClass]="classes('home')">
+      <i class="material-icons">home</i>
+      Search
+    </a>
+    <a class="router-link column-layout" routerLink="favorites" [ngClass]="classes('/favorites')">
+      <i class="material-icons">favorite</i>
+      Favorites
+    </a>
+    <a class="router-link column-layout" routerLink="profile" [ngClass]="classes('/profile')">
+      <i class="material-icons">perm_identity</i>
+      Profile
+    </a>
+    <a class="router-link column-layout" (click)="logout()">
+      <i class="material-icons">exit_to_app</i>
+      Logout
+    </a>
+  </nav>
+</mat-toolbar>

@@ -1,0 +1,14 @@
+<section id="profile">
+
+    <h1>Profile</h1>
+
+    <ul *ngIf="user$ | async as user" class="mt-3 column-layout">
+        <li>
+            <img [src]="user.imgURL" alt="user image" width="86px">
+        </li>
+        <li class="mt-2">
+            <p>{{ user.name }}</p>
+        </li>
+    </ul>
+
+</section>

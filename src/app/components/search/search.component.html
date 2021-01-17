@@ -1,0 +1,19 @@
+<form class="city-search-form flex align-center justify-center">
+
+  <i class="material-icons">search</i>
+
+  <mat-form-field>
+
+    <input type="text" (keypress)="onInput($event)" (keydown)="filterBackspace($event)"
+      placeholder="Search for a city - in English only" aria-label="City" matInput [formControl]="myControl"
+      [matAutocomplete]="auto" />
+
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onSelectingOption($event)">
+      <mat-option *ngFor="let city of cities$ | async" [value]="city">
+        {{city.localizedName}}
+      </mat-option>
+    </mat-autocomplete>
+
+  </mat-form-field>
+
+</form>

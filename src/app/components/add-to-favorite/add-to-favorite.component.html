@@ -1,0 +1,17 @@
+<div *ngIf="featuredCity$ | async as city">
+   <div class="action-btns flex align-top"
+      *ngIf="featuredCityWeather$ | async as cityWeather"
+   >
+
+     <section *ngIf="!city.isFavorite; else elseBlock">
+       <button class="fav-btn" (click)="addToFav(cityWeather)">
+          <i class="material-icons empty-heart">favorite_border </i>
+        </button>
+      </section>
+      <ng-template #elseBlock>
+        <button class="fav-btn" (click)="removeFromFav(city.key)">
+            <span class="heart-icon"></span>
+        </button>
+      </ng-template>
+    </div>
+</div>

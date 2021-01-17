@@ -1,0 +1,24 @@
+<body>
+  <div class="favorites-container flex space-around wrap">
+    <section class="card pointer-cursor" *ngFor="let city of (favorite$ | async)?.favoriteKeyMap"
+      [routerLink]="['/', city.key, city.localizedName]" routerLinkActive="active">
+
+      <button class="remove-btn" (click)="removeFromFavorites(city.key)">
+        ✗
+      </button>
+      <mat-card-title class="item card-day-title">
+        {{city.localizedName}}
+      </mat-card-title>
+
+      <img class="item weather-img" [src]="getIconSrc(city.weatherIcon)" alt="weather-icon" />
+
+      <mat-card-title class="item card-day-degree flex direction-column">
+        {{ city.celsDegree }}&#8451;
+      </mat-card-title>
+
+      <mat-card-title class="item card-day-description">
+        {{city.weatherText}}
+      </mat-card-title>
+    </section>
+  </div>
+</body>

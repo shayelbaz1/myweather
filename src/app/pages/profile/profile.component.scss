@@ -1,0 +1,11 @@
+@import "src/sass/styles";
+
+#profile {
+    margin-top: 32px;
+    @extend .box-shadow;
+    @extend .column-layout;
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}

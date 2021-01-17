@@ -1,0 +1,30 @@
+<div class="weather-view">
+  <section class="weather-today flex wrap align-top justify-center">
+    <div class="city-details flex" *ngIf="cityData$ | async as cityData">
+
+      <h2 class="city-name sub-title ">{{ featuredCity.localizedName }}</h2>
+      <h2 class="city-temp sub-title" *ngIf="isMetric; else elseBlock">
+        {{ cityData.celsDegree }}&#8451;
+      </h2>
+      <ng-template #elseBlock>
+        <h2 class="city-temp sub-title">{{ cityData.fahrDegree }}&#8457;</h2>
+      </ng-template>
+    </div>
+    <span class="fav-section">
+      <app-add-to-favorite></app-add-to-favorite>
+    </span>
+  </section>
+
+
+  <section>
+    <div class="weather-description full-width flex justify-center" *ngIf="cityData$ | async as cityData">
+      <img class="weather-img" [src]="path + cityData.weatherIcon + '.png'" alt="weather-icon" />
+      <span class="weather-text main-title">{{ cityData.weatherText }}</span>
+    </div>
+  </section>
+
+  <section class="weather-details-container grid justify-center">
+    <app-weather-details [day]="dayWeather" class="day-view" *ngFor="let dayWeather of weekWeather.dailyForecasts">
+    </app-weather-details>
+  </section>
+</div>

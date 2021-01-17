@@ -1,0 +1,26 @@
+.main-topbar {
+    background-color: $color-header;
+}
+
+body {
+    margin: 0;
+    padding-top: rem(60);
+    background-image: $color-background;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a,
+button {
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.reset-margin {
+    margin: 0;
+}
+
+.router-link:active {
+    background-color: $color-active_link;
+}
