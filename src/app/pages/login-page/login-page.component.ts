@@ -26,7 +26,7 @@ export class LoginPageComponent implements OnInit {
 
   logo = isDevMode() ?
     `../../../assets/logo/logo.png` :
-    `https://shayelbaz1.github.io/weatherApp/assets/imgs/logo/logo.png`;
+    `https://shayelbaz1.github.io/weatherApp/assets/logo/logo.png`;
 
   signup(ev) {
     ev.preventDefault();

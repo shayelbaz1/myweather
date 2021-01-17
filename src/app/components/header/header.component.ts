@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
 
   logo = isDevMode() ?
     `../../../assets/logo/logo.png` :
-    `https://shayelbaz1.github.io/weatherApp/assets/imgs/logo/logo.png`;
+    `https://shayelbaz1.github.io/weatherApp/assets/logo/logo.png`;
 
   ngOnInit() {
     this.isLoggedIn$ = this.userService.loggedIn;
