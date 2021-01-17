@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserServiceService } from 'src/app/services/user-service/user-service.service';
 import { Observable } from 'rxjs';
@@ -23,6 +23,10 @@ export class LoginPageComponent implements OnInit {
   userName: string;
 
   ngOnInit(): void { }
+
+  logo = isDevMode() ?
+    `../../../assets/logo/logo.png` :
+    `https://shayelbaz1.github.io/weatherApp/assets/imgs/logo/logo.png`;
 
   signup(ev) {
     ev.preventDefault();

@@ -25,7 +25,7 @@ export class FavoriteComponent implements OnInit {
 
   path = isDevMode() ?
     `../../../../assets/imgs/` :
-    `https://shayelbaz1.github.io/Weather_app/assets/imgs/`;
+    `https://shayelbaz1.github.io/weatherApp/assets/imgs/`;
 
   removeFromFavorites(key) {
     this.store.dispatch(new FavoriteActions.RemoveFavCity(key));
