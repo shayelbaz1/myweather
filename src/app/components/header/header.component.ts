@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserServiceService } from 'src/app/services/user-service/user-service.service';
@@ -26,6 +26,11 @@ export class HeaderComponent implements OnInit {
     });
 
   }
+
+
+  logo = isDevMode() ?
+    `../../../assets/logo/logo.png` :
+    `https://shayelbaz1.github.io/weatherApp/assets/imgs/logo/logo.png`;
 
   ngOnInit() {
     this.isLoggedIn$ = this.userService.loggedIn;
